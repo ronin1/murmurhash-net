@@ -67,7 +67,7 @@ namespace Murmur
             return result;
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected abstract void HashCore(byte[] data, int offset, int blocks, int remainder);
     }
 }

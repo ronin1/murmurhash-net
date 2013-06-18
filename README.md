@@ -1,5 +1,7 @@
 An implementation of the [Murmur3](http://code.google.com/p/smhasher/wiki/MurmurHash3) hash for .NET
 
+Forked to adapt to .NET 4.0 (not 4.5) and NNunit/TestDriven Test compatibility.
+
 As of the time this was written, this library supports the 3 main Murmur3 variants: 32-bit hash (x86), 128-bit hash (x86) and 128-bit hash (x64).
 The variants are implemented as HashAlgorithm implementations, so that they can be transparently swapped out with any other .NET framework algorithms.
 For each algorithm, there is a managed and unmanaged (rather, unsafe) variant that you can pick when creating the algorithm. 

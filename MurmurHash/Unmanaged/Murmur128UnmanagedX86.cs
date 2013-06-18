@@ -45,7 +45,7 @@ namespace Murmur
             h1 = h2 = h3 = h4 = Seed;
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void HashCore(byte[] array, int ibStart, int cbSize)
         {
             // store the length of the hash (for use later)
@@ -70,7 +70,7 @@ namespace Murmur
             }
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         unsafe private void Body(byte* data, int count)
         {
             // grab a reference to blocks
@@ -98,7 +98,7 @@ namespace Murmur
             }
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         unsafe private void Tail(byte* tail, int remainder)
         {
             // create our keys and initialize to 0
@@ -131,7 +131,7 @@ namespace Murmur
             h1 = h1 ^ ((k1 * c1).RotateLeft(15) * c2);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override byte[] HashFinal()
         {
             uint len = (uint)Length;

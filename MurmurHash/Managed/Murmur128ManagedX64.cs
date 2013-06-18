@@ -51,7 +51,7 @@ namespace Murmur
                 Body(array);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void Body(byte[] data)
         {
             int remaining = Length;
@@ -78,7 +78,7 @@ namespace Murmur
                 Tail(data, position, remaining);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void Tail(byte[] tail, int start, int remaining)
         {
             // create our keys and initialize to 0
@@ -108,7 +108,7 @@ namespace Murmur
             h1 = h1 ^ ((k1 * c1).RotateLeft(31) * c2);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override byte[] HashFinal()
         {
             ulong len = (ulong)Length;
@@ -130,7 +130,7 @@ namespace Murmur
             return result;
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static ulong fmix(ulong k)
         {
             k = (k ^ (k >> 33)) * 0xff51afd7ed558ccdL;

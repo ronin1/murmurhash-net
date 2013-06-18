@@ -25,7 +25,7 @@ namespace Murmur
     {
         public Murmur32UnmanagedX86(uint seed = 0) : base(seed: seed) { }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void HashCore(byte[] data, int offset, int blocks, int remainder)
         {
             unsafe
@@ -47,7 +47,7 @@ namespace Murmur
             }
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         unsafe private void Tail(byte* tail, int remainder)
         {
             // create our keys and initialize to 0

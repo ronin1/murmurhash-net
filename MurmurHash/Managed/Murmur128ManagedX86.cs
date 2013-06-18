@@ -61,7 +61,7 @@ namespace Murmur
             }
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void Body(byte[] data, int count, int remainder)
         {
             int offset = 0;
@@ -94,7 +94,7 @@ namespace Murmur
                 Tail(data, offset, remainder);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void Tail(byte[] tail, int position, int remainder)
         {
             // create our keys and initialize to 0
@@ -151,7 +151,7 @@ namespace Murmur
             return result;
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static uint fmix(uint h)
         {
             // pipelining friendly algorithm
